@@ -1,0 +1,7 @@
+<form ng-submit="requestFunding()">
+    Starting:
+    <input ng-model="funding.startingEstimate">Recommendation: {{funding.needed}}
+
+    <button type="submit">Fund my startup!</button>
+    <button ng-click="reset()">Reset</button>
+</form>
