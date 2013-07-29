@@ -1,0 +1,15 @@
+<ul>
+    <li ng-repeat='student in students'>
+        <a href='/student/view/{{student.id}}'>{{student.name}}</a> 
+        <span>{{$index}}</span>
+    </li>
+</ul>
+<button ng-click="insertTom()">Insert</button>
+
+<table>
+    <tr ng-repeat='track in album'>
+        <td>{{$index + 1}}</td>
+        <td>{{track.name}}</td>
+        <td>{{track.duration}}</td>
+    </tr>
+</table>
