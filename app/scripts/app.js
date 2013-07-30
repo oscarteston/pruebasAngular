@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva','Listado'])
+angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva','Listado','showAndHide','classAndCssStyle'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/main', {
@@ -18,6 +18,10 @@ angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva','Lis
             .when('/listado', {
                 templateUrl: 'views/listado.html',
                 controller: 'listadoCtrl'
+            })
+            .when('/classAndCssStyle', {
+                templateUrl: 'views/classAndCssStyle.html',
+                controller: 'classAndCssStyleCtrl'
             })
             .otherwise({
                 redirectTo: '/main'
