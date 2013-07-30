@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva','Listado','showAndHide','classAndCssStyle'])
+angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva', 'Listado', 'showAndHide', 'classAndCssStyle','Directiva2'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/main', {
@@ -14,6 +14,10 @@ angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva','Lis
             .when('/directiva', {
                 templateUrl: 'views/directiva.html',
                 controller: 'DirectivaCtrl'
+            })
+            .when('/directiva2', {
+                templateUrl: 'views/directiva2.html',
+                controller: 'Directiva2Ctrl'
             })
             .when('/listado', {
                 templateUrl: 'views/listado.html',
