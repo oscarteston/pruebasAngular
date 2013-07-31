@@ -40,3 +40,19 @@ background-color: yellow;
 .expander > .body {
     padding: .1em .3em;
 }
+
+.green {
+  color: green;
+  font-size: 100px;
+  margin: 50px 50px;
+}
+ 
+.red {
+  color: red;
+  font-size: 100px;
+  margin: 50px 50px;
+}
+
+button{
+    display: block;
+}

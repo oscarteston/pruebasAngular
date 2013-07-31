@@ -10,9 +10,11 @@ angular.module('Directiva', [])
             transclude: true,
             scope: {
                 title: '=expanderTitle',
-                expandir: "@"
             },
-            templateUrl: "components/expand.html",
+            template: '<div>'+
+                            '<div class="title" ng-click="toggle()">{{title}}</div>'+
+                            '<div class="body" ng-show="showMe" ng-transclude></div>'+
+                        '</div>',
             link: function(scope, element, attrs) {
 
                 scope.showMe = false;

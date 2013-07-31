@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva', 'Listado', 'showAndHide', 'classAndCssStyle','Directiva2'])
+angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva', 'Listado', 'showAndHide', 'classAndCssStyle',
+    'Directiva2', 'Watch'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/main', {
@@ -23,9 +24,17 @@ angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva', 'Li
                 templateUrl: 'views/listado.html',
                 controller: 'listadoCtrl'
             })
+            .when('/showAndHide', {
+                templateUrl: 'views/showAndHide.html',
+                controller: 'showAndHideCtrl'
+            })
             .when('/classAndCssStyle', {
                 templateUrl: 'views/classAndCssStyle.html',
                 controller: 'classAndCssStyleCtrl'
+            })
+            .when('/watch', {
+                templateUrl: 'views/watch.html',
+                controller: 'watchCtrl'
             })
             .otherwise({
                 redirectTo: '/main'
