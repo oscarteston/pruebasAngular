@@ -1,1 +1,21 @@
- <counter></counter>
+<div> 
+	<h2>Ejemplo: Uso de Watch</h2>
+</div>
+
+<div >
+    <div ng-repeat="item in items">
+        <span>{{item.title}}</span>
+        <input ng-model="item.quantity">
+        <span>{{item.price | currency}}</span>
+        <span>{{item.price * item.quantity | currency}}</span>
+    </div>
+    <div>Total: {{totalCart() | currency}}</div>
+    <div>Descuento: {{bill.discount | currency}}</div>
+    <div>Subtotal: {{subtotal() | currency}}</div>
+</div>
+
+<br><br>
+<div>
+	<h2>Ejemplo: Directiva + Watch</h2>
+</div>
+<counter></counter>
