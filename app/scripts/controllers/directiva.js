@@ -11,17 +11,20 @@ angular.module('Directiva', [])
             scope: {
                 title: '=expanderTitle',
             },
-            template: '<div>'+
-                            '<div class="title" ng-click="toggle()">{{title}}</div>'+
-                            '<div class="body" ng-show="showMe" ng-transclude></div>'+
-                        '</div>',
-            link: function(scope, element, attrs) {
+            template: '<div>' + 
+            '<div class="title" ng-click="toggle()">{{title}}</div>' + 
+            '<div class="body" ng-show="showMe" ng-transclude></div>' + 
+            '</div>',
+            compile: function(cElm, cAttrs) {
+                return  function link(scope, element, attrs) {
+                    console.log(element.html())
+                    scope.showMe = false;
+                    scope.toggle = function toggle() {
+                        scope.showMe = !scope.showMe;
+                    }
 
-                scope.showMe = false;
-                scope.toggle = function toggle() {
-                    scope.showMe = !scope.showMe;
                 }
             }
+
         }
     })
-
