@@ -4,8 +4,8 @@ angular.module('PruebaAngularApp', ['PruebaMain', 'Formulario', 'Directiva', 'Li
     'Directiva2', 'Watch'])
     .config(function($routeProvider) {
         $routeProvider
-            .when('/main', {
-                templateUrl: 'views/main.html',
+            .when('/main', {    
+                templateUrl: 'views/main.html',  
                 controller: 'MainCtrl'
             })
             .when('/formulario', {
